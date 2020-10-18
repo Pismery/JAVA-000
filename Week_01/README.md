@@ -23,6 +23,15 @@
 3. 画一张图,展示Xmx,Xms, Xmn,Meta, DirectMemory, Xss这些内存参数的
    关系。
 
+![](https://gitee.com/pismery/imageshack/raw/master/img/20201018220436.png)
+
+参考链接：
+
+- [JVM调优总结 -Xms -Xmx -Xmn -Xss](https://www.cnblogs.com/likehua/p/3369823.html)
+
+- [Java8内存模型—永久代(PermGen)和元空间(Metaspace)](https://www.cnblogs.com/paddix/p/5309550.html)
+- [JVM系列三:JVM参数设置、分析](https://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html)
+
 
 
 4. 检查一下自己维护的业务系统的JVM参数配置,用jstat和jstack,jmap查看一下
