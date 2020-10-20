@@ -23,7 +23,7 @@
 3. 画一张图,展示Xmx,Xms, Xmn,Meta, DirectMemory, Xss这些内存参数的
    关系。
 
-![](https://gitee.com/pismery/imageshack/raw/master/img/20201018220436.png)
+![](https://gitee.com/pismery/imageshack/raw/master/img/20201020212239.png)
 
 参考链接：
 
