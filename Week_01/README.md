@@ -46,7 +46,7 @@
 2. jstat -gc <pid> 1000 1000 : 查看 JVM 内存和 GC 情况
 3. jstat -gcutil <pid> 1000 1000 : 查看 JVM 内存和 GC 内存使用率
 4. jmap -histo <pid>
-5. jmap -heap
+5. jmap -heap <pid>
 6. jcmd <pid> help
 
 ## JDK 图形化工具

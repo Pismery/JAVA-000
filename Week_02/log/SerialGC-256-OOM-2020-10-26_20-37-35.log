@@ -1,0 +1,52 @@
+Java HotSpot(TM) 64-Bit Server VM (25.202-b08) for windows-amd64 JRE (1.8.0_202-b08), built on Dec 15 2018 19:54:30 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16580024k(9377336k free), swap 19070392k(10128268k free)
+CommandLine flags: -XX:InitialHeapSize=268435456 -XX:MaxHeapSize=268435456 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseSerialGC 
+0.119: [GC (Allocation Failure) 0.119: [DefNew: 69952K->8704K(78656K), 0.0128835 secs] 69952K->22495K(253440K), 0.0130505 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+0.146: [GC (Allocation Failure) 0.147: [DefNew: 78610K->8702K(78656K), 0.0150947 secs] 92401K->45169K(253440K), 0.0162400 secs] [Times: user=0.00 sys=0.02, real=0.02 secs] 
+0.171: [GC (Allocation Failure) 0.171: [DefNew: 78615K->8703K(78656K), 0.0136957 secs] 115081K->70486K(253440K), 0.0137581 secs] [Times: user=0.00 sys=0.02, real=0.01 secs] 
+0.194: [GC (Allocation Failure) 0.194: [DefNew: 78454K->8703K(78656K), 0.0125629 secs] 140237K->97091K(253440K), 0.0126086 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+0.215: [GC (Allocation Failure) 0.215: [DefNew: 78573K->8696K(78656K), 0.0123353 secs] 166962K->122535K(253440K), 0.0123755 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.236: [GC (Allocation Failure) 0.236: [DefNew: 78648K->8703K(78656K), 0.0095156 secs] 192487K->142043K(253440K), 0.0095709 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+0.255: [GC (Allocation Failure) 0.255: [DefNew: 78364K->8700K(78656K), 0.0112014 secs] 211704K->164802K(253440K), 0.0112573 secs] [Times: user=0.00 sys=0.02, real=0.01 secs] 
+0.273: [GC (Allocation Failure) 0.273: [DefNew: 78652K->78652K(78656K), 0.0000105 secs]0.273: [Tenured: 156102K->159979K(174784K), 0.0211506 secs] 234754K->159979K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0212149 secs] [Times: user=0.03 sys=0.00, real=0.02 secs] 
+0.302: [GC (Allocation Failure) 0.302: [DefNew: 69768K->69768K(78656K), 0.0000103 secs]0.302: [Tenured: 159979K->172888K(174784K), 0.0254770 secs] 229748K->172888K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0255753 secs] [Times: user=0.02 sys=0.02, real=0.03 secs] 
+0.336: [GC (Allocation Failure) 0.336: [DefNew: 69952K->69952K(78656K), 0.0000106 secs]0.336: [Tenured: 172888K->174593K(174784K), 0.0214092 secs] 242840K->191657K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0214944 secs] [Times: user=0.03 sys=0.00, real=0.02 secs] 
+0.365: [Full GC (Allocation Failure) 0.365: [Tenured: 174593K->174781K(174784K), 0.0256543 secs] 252788K->195750K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0257005 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+0.397: [Full GC (Allocation Failure) 0.397: [Tenured: 174781K->174781K(174784K), 0.0061283 secs] 253363K->216471K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0062079 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+0.408: [Full GC (Allocation Failure) 0.408: [Tenured: 174781K->174649K(174784K), 0.0150602 secs] 253402K->222485K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0151075 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+0.427: [Full GC (Allocation Failure) 0.427: [Tenured: 174649K->174053K(174784K), 0.0182312 secs] 253298K->229352K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0182803 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+0.447: [Full GC (Allocation Failure) 0.447: [Tenured: 174730K->174739K(174784K), 0.0290572 secs] 253386K->225383K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0290991 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+0.480: [Full GC (Allocation Failure) 0.480: [Tenured: 174739K->174739K(174784K), 0.0048828 secs] 252921K->236100K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0049266 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+0.487: [Full GC (Allocation Failure) 0.487: [Tenured: 174739K->174739K(174784K), 0.0061941 secs] 253325K->243840K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0062346 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.494: [Full GC (Allocation Failure) 0.494: [Tenured: 174739K->174706K(174784K), 0.0158203 secs] 253218K->244137K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0158923 secs] [Times: user=0.03 sys=0.00, real=0.02 secs] 
+0.512: [Full GC (Allocation Failure) 0.512: [Tenured: 174706K->174731K(174784K), 0.0281843 secs] 252925K->236122K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0282247 secs] [Times: user=0.02 sys=0.00, real=0.03 secs] 
+0.543: [Full GC (Allocation Failure) 0.543: [Tenured: 174731K->174731K(174784K), 0.0074612 secs] 253128K->241533K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0075066 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.552: [Full GC (Allocation Failure) 0.552: [Tenured: 174731K->174731K(174784K), 0.0093978 secs] 253291K->243120K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0094361 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+0.563: [Full GC (Allocation Failure) 0.563: [Tenured: 174731K->174731K(174784K), 0.0070948 secs] 253286K->246068K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0071330 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.571: [Full GC (Allocation Failure) 0.571: [Tenured: 174776K->174738K(174784K), 0.0302662 secs] 253427K->240083K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0303052 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+0.603: [Full GC (Allocation Failure) 0.603: [Tenured: 174738K->174738K(174784K), 0.0022377 secs] 253379K->246370K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0022668 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+0.606: [Full GC (Allocation Failure) 0.606: [Tenured: 174738K->174738K(174784K), 0.0097670 secs] 253366K->247683K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0098038 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.617: [Full GC (Allocation Failure) 0.617: [Tenured: 174738K->174738K(174784K), 0.0063727 secs] 253348K->251201K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0064331 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+0.624: [Full GC (Allocation Failure) 0.624: [Tenured: 174738K->174758K(174784K), 0.0303056 secs] 253356K->246461K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0303928 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+0.656: [Full GC (Allocation Failure) 0.656: [Tenured: 174758K->174758K(174784K), 0.0054375 secs] 253285K->249608K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0054835 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.661: [Full GC (Allocation Failure) 0.661: [Tenured: 174758K->174758K(174784K), 0.0085280 secs] 252850K->250841K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0085645 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+0.670: [Full GC (Allocation Failure) 0.670: [Tenured: 174758K->174758K(174784K), 0.0015511 secs] 252704K->251012K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0015757 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+0.672: [Full GC (Allocation Failure) 0.672: [Tenured: 174758K->174570K(174784K), 0.0278460 secs] 253251K->250198K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0278814 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+0.701: [Full GC (Allocation Failure) 0.701: [Tenured: 174737K->174737K(174784K), 0.0059933 secs] 253348K->251064K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0060318 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.707: [Full GC (Allocation Failure) 0.707: [Tenured: 174737K->174737K(174784K), 0.0020715 secs] 252508K->251064K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0021101 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+0.709: [Full GC (Allocation Failure) 0.709: [Tenured: 174737K->174737K(174784K), 0.0011493 secs] 252852K->251856K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0011792 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+0.711: [Full GC (Allocation Failure) 0.711: [Tenured: 174737K->174664K(174784K), 0.0266054 secs] 253277K->250547K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0266401 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+0.738: [Full GC (Allocation Failure) 0.738: [Tenured: 174664K->174664K(174784K), 0.0064117 secs] 253319K->251683K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0064839 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.745: [Full GC (Allocation Failure) 0.745: [Tenured: 174664K->174664K(174784K), 0.0012736 secs] 253085K->251793K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0013072 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+0.746: [Full GC (Allocation Failure) 0.746: [Tenured: 174664K->174664K(174784K), 0.0078271 secs] 252615K->251935K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0078620 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+0.754: [Full GC (Allocation Failure) 0.754: [Tenured: 174693K->174610K(174784K), 0.0244693 secs] 253328K->252138K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0245340 secs] [Times: user=0.03 sys=0.00, real=0.02 secs] 
+0.779: [Full GC (Allocation Failure) 0.779: [Tenured: 174610K->174591K(174784K), 0.0207922 secs] 252138K->252119K(253440K), [Metaspace: 2608K->2608K(1056768K)], 0.0208246 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+Heap
+ def new generation   total 78656K, used 77915K [0x00000000f0000000, 0x00000000f5550000, 0x00000000f5550000)
+  eden space 69952K, 100% used [0x00000000f0000000, 0x00000000f4450000, 0x00000000f4450000)
+  from space 8704K,  91% used [0x00000000f4cd0000, 0x00000000f5496e80, 0x00000000f5550000)
+  to   space 8704K,   0% used [0x00000000f4450000, 0x00000000f4450000, 0x00000000f4cd0000)
+ tenured generation   total 174784K, used 174591K [0x00000000f5550000, 0x0000000100000000, 0x0000000100000000)
+   the space 174784K,  99% used [0x00000000f5550000, 0x00000000fffcfc58, 0x00000000fffcfe00, 0x0000000100000000)
+ Metaspace       used 2638K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 291K, capacity 386K, committed 512K, reserved 1048576K
