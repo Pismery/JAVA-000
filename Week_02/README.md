@@ -63,7 +63,7 @@ java -Xmx4g -Xms4g -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:+PrintGC -Xloggc:./l
 
    
 
-   ![image-20201026215035748](C:\Users\96502\AppData\Roaming\Typora\typora-user-images\image-20201026215035748.png)
+   ![](https://gitee.com/pismery/imageshack/raw/master/img/20201026214933.png)
 
    
 
