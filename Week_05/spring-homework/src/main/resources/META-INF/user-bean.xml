@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user-by-construct-method" class="org.pismery.javacourse.springhomework.User">
+           <constructor-arg name="id" value="1"/>
+           <constructor-arg name="name" value="Liuliuliu"/>
+           <constructor-arg name="createBy" value="construct-method"/>
+    </bean>
+
+    <bean id="user-by-init-method" class="org.pismery.javacourse.springhomework.User" init-method="initMethod"/>
+
+    <bean id="user-by-static-factory-method" class="org.pismery.javacourse.springhomework.User" factory-method="createUser"/>
+
+    <bean id="user-by-instance-factory-method" factory-bean="userFactory" factory-method="createUser">
+        <constructor-arg name="createBy" value="instance-factory-method"/>
+    </bean>
+    <bean id="userFactory" class="org.pismery.javacourse.springhomework.factory.DefaultUserFactory"/>
+
+    <bean id="user-by-factory-bean" class="org.pismery.javacourse.springhomework.factorybean.UserFactoryBean"/>
+
+
+    <bean id="user-by-service-loader" class="org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean">
+        <property name="serviceType" value="org.pismery.javacourse.springhomework.factory.UserFactory"/>
+    </bean>
+
+
+</beans>
