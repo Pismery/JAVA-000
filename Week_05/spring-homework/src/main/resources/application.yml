@@ -1,0 +1,18 @@
+
+
+school:
+  klass:
+    students: [
+    {
+      id: 1,
+      name: Liuliuliu1
+    },
+    {
+      id: 2,
+      name: Liuliuliu2
+    }
+    ]
+  student100: {
+    id: 3,
+    name: Liuliuliu3
+  }

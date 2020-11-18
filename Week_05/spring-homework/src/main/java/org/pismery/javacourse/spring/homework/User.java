@@ -1,4 +1,4 @@
-package org.pismery.javacourse.springhomework;
+package org.pismery.javacourse.spring.homework;
 
 public class User {
     private Long id;

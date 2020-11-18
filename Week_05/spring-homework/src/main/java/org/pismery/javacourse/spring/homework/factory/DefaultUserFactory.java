@@ -1,4 +1,4 @@
-package org.pismery.javacourse.springhomework.factory;
+package org.pismery.javacourse.spring.homework.factory;
 
 public class DefaultUserFactory implements UserFactory {
 }

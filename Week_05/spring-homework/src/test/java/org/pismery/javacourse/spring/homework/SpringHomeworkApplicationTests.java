@@ -1,4 +1,4 @@
-package org.pismery.javacourse.springhomework;
+package org.pismery.javacourse.spring.homework;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

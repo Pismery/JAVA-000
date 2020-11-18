@@ -1,6 +1,6 @@
-package org.pismery.javacourse.springhomework.factorybean;
+package org.pismery.javacourse.spring.homework.factorybean;
 
-import org.pismery.javacourse.springhomework.User;
+import org.pismery.javacourse.spring.homework.User;
 import org.springframework.beans.factory.FactoryBean;
 
 public class UserFactoryBean implements FactoryBean {

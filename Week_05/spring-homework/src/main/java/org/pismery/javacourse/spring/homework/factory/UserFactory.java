@@ -1,6 +1,6 @@
-package org.pismery.javacourse.springhomework.factory;
+package org.pismery.javacourse.spring.homework.factory;
 
-import org.pismery.javacourse.springhomework.User;
+import org.pismery.javacourse.spring.homework.User;
 
 public interface UserFactory {
 
