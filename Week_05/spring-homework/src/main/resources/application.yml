@@ -16,3 +16,5 @@ school:
     id: 3,
     name: Liuliuliu3
   }
+logging:
+  level: info
