@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.pismery.javacourse.ss.homework.dao.OrderMapper">
+    <resultMap id="BaseResultMap" type="org.pismery.javacourse.ss.homework.entity.Order">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,userId,productId
+        ,price,status,payType
+        ,country,province,city,street,detail,recipient,recipientPhone
+        ,recordStatus,recordChangedTime,recordChangedBy
+    </sql>
+
+    <insert id="insert" parameterType="org.pismery.javacourse.ss.homework.entity.Order" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        <selectKey keyProperty="id" resultType="java.lang.Long"  order="AFTER">
+            select LAST_INSERT_ID() as id
+        </selectKey>
+        insert into t_order (userId,productId
+            ,price,status,payType
+            ,country,province,city,street,detail,recipient,recipientPhone
+            ,recordStatus,recordChangedTime,recordChangedBy)
+        values (#{userId,jdbcType=BIGINT},#{productId,jdbcType=BIGINT}
+            ,#{price},#{status},#{payType}
+            ,#{country},#{province},#{city},#{street},#{detail},#{recipient},#{recipientPhone}
+            ,#{recordStatus},#{recordChangedTime},#{recordChangedBy}
+        )
+    </insert>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from t_order
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from t_order where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <update id="updateByPrimaryKey" parameterType="org.pismery.javacourse.ss.homework.entity.Order">
+        UPDATE t_order
+        <trim prefix="set" suffixOverrides=",">
+            <!--<if test="userId!=null"> userId = #{userId},</if>-->
+            <if test="productId!=null"> productId = #{productId},</if>
+            <if test="price!=null"> price = #{price},</if>
+            <if test="status!=null"> status = #{status},</if>
+            <if test="payType!=null"> payType = #{payType},</if>
+            <if test="country!=null"> country = #{country},</if>
+            <if test="province!=null"> province = #{province},</if>
+            <if test="city!=null"> city = #{city},</if>
+            <if test="street!=null"> street = #{street},</if>
+            <if test="detail!=null"> detail = #{detail},</if>
+            <if test="recipient!=null"> recipient = #{recipient},</if>
+            <if test="recipientPhone!=null"> recipientPhone = #{recipientPhone},</if>
+            <if test="recordStatus!=null"> recordStatus = #{recordStatus},</if>
+            <if test="recordChangedTime!=null"> recordChangedTime = #{recordChangedTime},</if>
+            <if test="recordChangedBy!=null"> recordChangedBy = #{recordChangedBy},</if>
+        </trim>
+        WHERE id=#{id}
+    </update>
+</mapper>

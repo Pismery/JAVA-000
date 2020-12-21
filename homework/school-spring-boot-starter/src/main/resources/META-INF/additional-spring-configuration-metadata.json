@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "school.klass.students",
+      "type": "java.lang.String",
+      "description": "Description for school.klass.students."
+    },
+    {
+      "name": "school.student100.id",
+      "type": "java.lang.Integer",
+      "description": "Description for school.student100.id."
+    },
+    {
+      "name": "school.student100.name",
+      "type": "java.lang.String",
+      "description": "Description for school.student100.id."
+    }
+  ]
+}
