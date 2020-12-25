@@ -7,11 +7,13 @@ import org.pismery.javacourse.rpc.core.api.ApiBean;
 import org.pismery.javacourse.rpc.core.api.RpcfxRequest;
 import org.pismery.javacourse.rpc.core.api.RpcfxResolver;
 import org.pismery.javacourse.rpc.core.api.RpcfxResponse;
+import org.pismery.javacourse.rpc.core.exception.RpcfxException;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.Optional;
 
 public class RpcfxInvoker {
 
@@ -25,12 +27,12 @@ public class RpcfxInvoker {
         RpcfxResponse response = new RpcfxResponse();
         String serviceClass = request.getServiceClass();
 
-        // 作业1：改成泛型和反射
-        Object service = resolver.resolve(serviceClass);//this.applicationContext.getBean(serviceClass);
-
         try {
+            // 作业1：改成泛型和反射 => done
+            Object service = resolver.resolve(serviceClass);
             Method method = resolveMethodFromClass(service.getClass(), request.getMethod());
             Object result = method.invoke(service, request.getParams()); // dubbo, fastjson,
+
             // 两次json序列化能否合并成一个 => done
             response.setResult((ApiBean) result);
             response.setStatus(true);
@@ -39,17 +41,24 @@ public class RpcfxInvoker {
 
             // 3.Xstream
 
-            // 2.封装一个统一的RpcfxException
+            // 2.封装一个统一的RpcfxException => done
             // 客户端也需要判断异常
-            e.printStackTrace();
-            response.setException(e);
+            response.setException(new RpcfxException(e));
             response.setStatus(false);
             return response;
         }
     }
 
     private Method resolveMethodFromClass(Class<?> klass, String methodName) {
-        return Arrays.stream(klass.getMethods()).filter(m -> methodName.equals(m.getName())).findFirst().get();
+        Optional<Method> method = Arrays.stream(klass.getMethods())
+                .filter(m -> methodName.equals(m.getName()))
+                .findFirst();
+
+        if (!method.isPresent()) {
+            throw new RpcfxException("Method not found.");
+        }
+
+        return method.get();
     }
 
 }

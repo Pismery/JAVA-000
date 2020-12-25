@@ -37,17 +37,16 @@ public class RpcfxServerApplication {
 
     @Bean
     public RpcfxResolver createResolver() {
-        return new DemoResolver();
+        return new SpringContextResolver();
     }
 
-    // 能否去掉name
-    //
-    @Bean(name = "org.pismery.javacourse.rpc.demo.api.UserService")
+    // 能否去掉name => done
+    @Bean
     public UserService createUserService() {
         return new UserServiceImpl();
     }
 
-    @Bean(name = "org.pismery.javacourse.rpc.demo.api.OrderService")
+    @Bean
     public OrderService createOrderService() {
         return new OrderServiceImpl();
     }
