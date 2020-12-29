@@ -9,10 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.pismery.javacourse.hmily</groupId>
-    <artifactId>homework</artifactId>
+    <artifactId>hmily-homework</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>hmily-homework</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,55 +22,98 @@
         <mysql.version>5.1.47</mysql.version>
 
         <curator.version>5.1.0</curator.version>
-        <dubbo.version>2.6.5</dubbo.version>
+        <dubbo.version>2.7.7</dubbo.version>
         <zookeeper.version>3.6.0</zookeeper.version>
+        <hmily-demo-version>0.0.1-SNAPSHOT</hmily-demo-version>
+        <hmily-annotation.version>2.1.1</hmily-annotation.version>
+        <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
+        <hmily-spring-boot-starter-apache-dubbo.version>2.1.1</hmily-spring-boot-starter-apache-dubbo.version>
     </properties>
 
     <modules>
         <module>account-api</module>
-        <module>account-a</module>
-        <module>account-b</module>
+        <module>account</module>
         <module>inventory</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-        </dependency>
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>${dubbo.version}</version>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.pismery.javacourse.hmily</groupId>
+                <artifactId>account-api</artifactId>
+                <version>${hmily-demo-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.pismery.javacourse.hmily</groupId>
+                <artifactId>account</artifactId>
+                <version>${hmily-demo-version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-client</artifactId>
-            <version>${curator.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-framework</artifactId>
-            <version>${curator.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>hmily-annotation</artifactId>
+                <version>${hmily-annotation.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-            <version>${zookeeper.version}</version>
-        </dependency>
-    </dependencies>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
 
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-client</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>hmily-spring-boot-starter-apache-dubbo</artifactId>
+                <version>${hmily-spring-boot-starter-apache-dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.dromara</groupId>
+                        <artifactId>hmily-repository-mongodb</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

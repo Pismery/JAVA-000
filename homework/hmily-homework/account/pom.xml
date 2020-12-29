@@ -7,11 +7,10 @@
         <artifactId>hmily-homework</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
     <groupId>org.pismery.javacourse.hmily</groupId>
-    <artifactId>inventory</artifactId>
+    <artifactId>account</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>inventory</name>
+    <name>account</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,27 +23,10 @@
             <artifactId>account-api</artifactId>
         </dependency>
 
+        <!--Mybatis -->
         <dependency>
-            <groupId>org.dromara</groupId>
-            <artifactId>hmily-spring-boot-starter-apache-dubbo</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.dromara</groupId>
-                    <artifactId>hmily-repository-mongodb</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- Hmily -->
@@ -72,7 +54,6 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
@@ -90,6 +71,29 @@
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dromara</groupId>
+            <artifactId>hmily-spring-boot-starter-apache-dubbo</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.dromara</groupId>
+                    <artifactId>hmily-repository-mongodb</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

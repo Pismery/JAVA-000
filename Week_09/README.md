@@ -1,4 +1,7 @@
-学习笔记
+- 学号：G20200579010556
+- 姓名：刘流流
+- 班级：4 班
+
 
 1.（选做）实现简单的 Protocol Buffer/Thrift/gRPC(选任一个) 远程调用 demo。
 
@@ -6,7 +9,7 @@
 
 3.（必做）改造自定义 RPC 的程序，提交到 GitHub：
 
-[代码路径] (https://github.com/Pismery/JAVA-000/tree/main/homework/rpc-homework)
+[代码路径](https://github.com/Pismery/JAVA-000/tree/main/homework/rpc-homework)
 
 - 尝试将服务端写死查找接口实现类变成泛型和反射；
 - 尝试将客户端动态代理改成 AOP，添加异常处理；
@@ -28,6 +31,8 @@ Week09 作业题目（周六）：
 2.（选做）按 dubbo-samples 项目的各个 demo 学习具体功能使用。
 
 3.（必做）结合 dubbo+hmily，实现一个 TCC 外汇交易处理，代码提交到 GitHub:
+
+具体实现，请参考 [hmily-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/hmily-homework)
 
 - 用户 A 的美元账户和人民币账户都在 A 库，使用 1 美元兑换 7 人民币 ;
 - 用户 B 的美元账户和人民币账户都在 B 库，使用 7 人民币兑换 1 美元 ;

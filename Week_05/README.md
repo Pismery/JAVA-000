@@ -3,22 +3,15 @@
 - 班级：4 班
 
 
-
 Week05 作业题目（周四）：
 
 1.（必做）写代码实现 Spring Bean 的装配，方式越多越好（XML、Annotation 都可以）, 提交到 Github。
 
-参看 spring-homework 中得 HomeWork01
-
-
+参看 [spring-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/spring-homework) 中得 HomeWork01
 
 2.（选做）使 Java 里的动态代理，实现一个简单的 AOP。
 
-
-
 3.（选做）实现一个 Spring XML 自定义配置，配置一组 Bean，例如：Student/Klass/School。
-
-
 
 4.（选做，会添加到高手附加题）
 
@@ -33,15 +26,11 @@ Week05 作业题目（周四）：
 4.5 （超级挑战）尝试使用 ByteBuddy 与 Instrument 实现一个简单 JavaAgent 实现无侵入下的 AOP。
 
 
-
-
-
 Week05 作业题目（周六）：
 
 1.（必做）给前面课程提供的 Student/Klass/School 实现自动配置和 Starter。
 
-参看 spring-homework 中得 HomeWork02
-
+参看 [spring-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/spring-homework) 中得 HomeWork02
 
 
 2.（必做）研究一下 JDBC 接口和数据库连接池，掌握它们的设计和用法：
@@ -58,7 +47,7 @@ Week05 作业题目（周六）：
 
 3.（选做）总结一下，单例的各种写法，比较它们的优劣。
 
-关于单例模式的饿汉式，懒汉式，双重检查锁式，静态内部类，枚举，以及防止反射与序列化问题，可参看个人博客[单例模式的演进](https://pismery.gitee.io/blog/post/common/design-pattern/单例模式演进/)
+关于单例模式的饿汉式，懒汉式，双重检查锁式，静态内部类，枚举，以及防止反射与序列化问题，可参看个人博客文章 - [单例模式的演进](https://pismery.gitee.io/blog/post/common/design-pattern/单例模式演进/)
 
 4.（选做）maven/spring 的 profile 机制，都有什么用法？
 

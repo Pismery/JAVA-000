@@ -3,14 +3,13 @@
 - 班级：4 班
 
 
-
 Week07 作业题目（周四）：
 
 1.（选做）用今天课上学习的知识，分析自己系统的 SQL 和表结构
 
 2.（必做）按自己设计的表结构，插入 100 万订单模拟数据，测试不同方式的插入效率
 
-```java
+```Java
 public int execute(Connection conn, String sql, Object... args) throws SQLException {
     try (PreparedStatement statement = conn.prepareStatement(sql)) {
         for (int i = 1; i <= args.length; i++) {
@@ -33,10 +32,7 @@ public int[] executeBatch(Connection conn, String sql, List<List<Object>> argsLi
         return statement.executeBatch();
     }
 }
-
 ```
-
-
 
 3.（选做）按自己设计的表结构，插入 1000 万订单模拟数据，测试不同方式的插入效
 
@@ -49,21 +45,18 @@ public int[] executeBatch(Connection conn, String sql, List<List<Object>> argsLi
 7.（选做）尝试实现或改造一个非精确分页的程序
 
 
-
 Week07 作业题目（周六）：
 
 1.（选做）配置一遍异步复制，半同步复制、组复制
 2.（必做）读写分离 - 动态切换数据源版本 1.0
 
-请参看类 DynamicDataSourceConfigure
-
-
+请参看 [database-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/database-homework) 
+类 DynamicDataSourceConfigure
 
 3.（必做）读写分离 - 数据库框架版本 2.0
 
-请参看类 ShardingSphereDataSourceConfigure
-
-
+请参看 [database-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/database-homework) 
+类 ShardingSphereDataSourceConfigure
 
 4.（选做）读写分离 - 数据库中间件版本 3.0
 

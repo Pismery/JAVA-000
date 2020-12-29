@@ -2,14 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-    <dependencies>
-        <dependency>
-            <groupId>org.pismery.javacourse.rpc</groupId>
-            <artifactId>rpcfx-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
     <parent>
 		<groupId>org.pismery.javacourse.rpc</groupId>
 		<artifactId>rpc-homework</artifactId>
@@ -25,4 +17,12 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.pismery.javacourse.rpc</groupId>
+			<artifactId>rpcfx-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
 </project>

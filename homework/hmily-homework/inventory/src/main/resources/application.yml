@@ -1,0 +1,13 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /
+  address: 0.0.0.0
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hmily_tcc_demo?useUnicode=true&characterEncoding=utf8
+    username: root
+    password:
