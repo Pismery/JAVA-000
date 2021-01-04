@@ -1,55 +1,38 @@
-# 缓存
+- 学号：G20200579010556
+- 姓名：刘流流
+- 班级：4 班
 
-数据分类
+# 作业
 
-- 静态数据
-- 准静态数据
-- 中间状态数据
+1.（选做）命令行下练习操作 Redis 的各种基本数据结构和命令。
 
+2.（选做）分别基于 jedis，RedisTemplate，Lettuce，Redission 实现 redis 基本操作的 demo，可以使用 spring-boot 集成上述工具。
 
+3.（选做）spring 集成练习:
 
-热数据：使用的多
+- 实现 update 方法，配合 @CachePut
+- 实现 delete 方法，配合 @CacheEvict
+- 将示例中的 spring 集成 Lettuce 改成 jedis 或 redisson
 
-读写比大 =》 适合缓存
+4.（必做）基于 Redis 封装分布式数据操作：
 
+- 在 Java 中实现一个简单的分布式锁；
+- 在 Java 中实现一个分布式计数器，模拟减库存。
 
+5.（必做）基于 Redis 的 PubSub 实现订单异步处理
 
-延迟异步加载
+1.（挑战☆）基于其他各类场景，设计并在示例代码中实现简单 demo：
 
-- 异步：查不到直接返回空，启动异步线程负责加载数据
-- 解耦：异步线程维护缓存，定期或根据条件触发更新
+- 实现分数排名或者排行榜；
+- 实现全局 ID 生成；
+- 基于 Bitmap 实现 id 去重；
+- 基于 HLL 实现点击量计数；
+- 以 redis 作为数据库，模拟使用 lua 脚本实现前面课程的外汇交易事务。
 
+2.（挑战☆☆）升级改造项目：
 
+- 实现 guava cache 的 spring cache 适配；
+- 替换 jackson 序列化为 fastjson 或者 fst，kryo；
+- 对项目进行分析和性能调优。
 
-### Redis
-
-字符串 Append 会使用更多的内存
-
-整数精度：大概保证 16 位； 大于 16 位会丢失精度
-
-
-
-
-
-
-
-### 参考资料
-
-Redis 基础手册：https://www.runoob.com/redis/redis-tutorial.html
-Redis 基础系列（推荐）：https://www.cnblogs.com/itzhouq/p/redis1.html
-Redis常用参数：https://www.cnblogs.com/liufukui/p/10448827.html
-Spring Cache整合ehcache和Redis：https://www.cnblogs.com/xiang--liu/p/9720344.html
-Spring Data Redis：https://blog.csdn.net/lydms/article/details/105224210
-Redis命中率：https://www.cnblogs.com/junlinqunxia/p/11244230.html
-Redis知识与场景集合（推荐）：http://c.biancheng.net/view/4560.html
-Redis内存优化：https://redis.io/topics/memory-optimization
-Redis数据类型原理与优化（推荐）：https://www.cnblogs.com/williamjie/p/11288062.html
-Redis优化的几个tips：
-\- https://zhuanlan.zhihu.com/p/55068567
-\- http://www.jwsblog.com/archives/50.html
-
-Lettuce详解：
-\- https://www.cnblogs.com/throwable/p/11601538.html
-\- https://blog.csdn.net/moonpure/article/details/82658788
-
-Redis设计与实现：http://redisbook.com/
+3.（挑战☆☆☆）以 redis 作为基础实现上个模块的自定义 rpc 的注册中心。

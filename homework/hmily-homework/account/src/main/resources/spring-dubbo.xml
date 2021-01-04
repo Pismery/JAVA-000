@@ -20,4 +20,10 @@
     <dubbo:service interface="org.pismery.javacourse.hmily.account.api.AccountService"
                    ref="accountService" executes="20" version="0.0.1"/>
 
+
+    <dubbo:reference timeout="500000000"
+                     interface="org.pismery.javacourse.hmily.account.api.TransactionService"
+                     id="transactionService"
+                     version="0.0.1"
+                     retries="0" check="false" actives="20"/>
 </beans>

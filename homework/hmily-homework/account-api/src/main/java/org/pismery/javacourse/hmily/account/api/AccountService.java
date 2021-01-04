@@ -11,5 +11,8 @@ public interface AccountService {
      * @return bool
      */
     @Hmily
-    boolean pay(Account account);
+    boolean paySuccess(Account account);
+
+    @Hmily
+    boolean payException();
 }

@@ -17,21 +17,37 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountMapper accountMapper;
 
+    private final TransactionService transactionService;
+
+
+    @Autowired(required = false)
+    public AccountServiceImpl(TransactionService transactionService) {
+        this.transactionService = transactionService;
+    }
+
     @Override
     @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
-    public boolean pay(Account account) {
+    public boolean paySuccess(Account account) {
+        log.info("============ dubbo tcc 执行 Try paySuccess===============");
         Account original = accountMapper.queryOne(account);
 
         original.setCnyWallet(original.getCnyWallet() + account.getCnyWallet());
         original.setUsWallet(original.getUsWallet() + account.getUsWallet());
 
         accountMapper.payment(account);
-        return false;
+        return true;
+    }
+
+    @Override
+    @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancelException")
+    public boolean payException() {
+        log.info("============ dubbo tcc 执行 Try payException===============");
+        throw new RuntimeException("payException");
     }
 
     @Transactional(rollbackFor = Exception.class)
     public boolean confirm(Account account) {
-        log.info("============dubbo tcc 执行确认付款接口===============");
+        log.info("============ dubbo tcc 执行确认付款接口===============");
         log.info("param account : " + account.toString());
         return true;
     }
@@ -39,6 +55,13 @@ public class AccountServiceImpl implements AccountService {
     @Transactional(rollbackFor = Exception.class)
     public boolean cancel(Account account) {
         log.info("============ dubbo tcc 执行取消付款接口===============");
+        log.info("param account : " + account.toString());
+        return true;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public boolean cancelException(Account account) {
+        log.info("============ dubbo tcc 执行 cancelException 接口===============");
         log.info("param account : " + account.toString());
         return true;
     }

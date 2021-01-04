@@ -34,3 +34,5 @@ build/
 ### VS Code ###
 .vscode/
 /homework/hmily-homework/account/logs/
+/homework/hmily-homework/logs/
+/logs/

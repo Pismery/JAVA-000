@@ -8,7 +8,7 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="order_service"/>
+    <dubbo:application name="inventory_service"/>
 
     <dubbo:registry protocol="zookeeper" address="localhost:2181" check="false"/>
 
@@ -22,4 +22,8 @@
                      id="accountService"
                      version="0.0.1"
                      retries="0" check="false" actives="20"/>
+
+    <dubbo:service interface="org.pismery.javacourse.hmily.account.api.TransactionService"
+                   ref="transactionService" executes="20" version="0.0.1"/>
+
 </beans>

@@ -17,9 +17,7 @@
 
 package org.pismery.javacourse.hmily.account.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import org.pismery.javacourse.hmily.account.api.Account;
 import org.springframework.stereotype.Repository;
 
@@ -45,5 +43,11 @@ public interface AccountMapper {
      * @return account
      */
     @Select("select * from hmily_dubbo_account where id = #{id}")
+    @Results({
+        @Result(id = true, property = "id", column = "id"),
+        @Result(property = "name", column = "name"),
+        @Result(property = "usWallet", column = "us_wallet"),
+        @Result(property = "cnyWallet", column = "cny_wallet")
+    })
     Account queryOne(Account account);
 }

@@ -20,60 +20,80 @@ package org.pismery.javacourse.hmily.inventory.service;
 import org.dromara.hmily.annotation.HmilyTCC;
 import org.pismery.javacourse.hmily.account.api.Account;
 import org.pismery.javacourse.hmily.account.api.AccountService;
+import org.pismery.javacourse.hmily.account.api.TransactionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
  * @author lw1243925457
  */
-@Service
+@Service("transactionService")
 public class TransactionServiceImpl implements TransactionService {
     private static final Logger log = LoggerFactory.getLogger(TransactionServiceImpl.class);
 
-    @Autowired(required = false)
+    // @Autowired(required = false)
     private AccountService accountService;
 
     /**
      * 这个注入很关键，这样注入就能进入RPC的切面，没有就报错
      * @param accountService account service
      */
-    // @Autowired(required = false)
-    // public TransactionServiceImpl(AccountService accountService) {
-    //     this.accountService = accountService;
-    // }
+    @Autowired(required = false)
+    public TransactionServiceImpl(AccountService accountService) {
+        this.accountService = accountService;
+    }
+
+    @Override
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    public void transactionException() {
+        log.info("============dubbo tcc 执行 Try transactionException ===============");
+        payA();
+        payException();
+    }
 
     @Override
     @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public void transaction() {
-        transactionA();
-        transactionB();
+        log.info("============dubbo tcc 执行 Try transaction ===============");
+
+        payA();
+        payB();
     }
 
-    private void transactionA() {
-        log.info("============py one dubbo try 执行确认付款接口===============");
+    private void payA() {
+        log.info("============py A dubbo try 执行确认付款接口===============");
         Account account = new Account();
         account.setId(1L);
         account.setUsWallet(-1L);
         account.setCnyWallet(7L);
-        accountService.pay(account);
+        accountService.paySuccess(account);
     }
 
-    private void transactionB() {
-        log.info("============py two dubbo try 执行确认付款接口===============");
+    private void payException() {
+        log.info("============py exception dubbo try 执行确认付款接口===============");
         Account account = new Account();
         account.setId(2L);
         account.setUsWallet(1L);
         account.setCnyWallet(-7L);
-        accountService.pay(account);
+        accountService.payException();
+    }
+
+    private void payB() {
+        log.info("============py B dubbo try 执行确认付款接口===============");
+        Account account = new Account();
+        account.setId(2L);
+        account.setUsWallet(1L);
+        account.setCnyWallet(-7L);
+        accountService.paySuccess(account);
     }
 
     public void confirmOrderStatus() {
-        log.info("=========进行订单confirm操作完成================");
+        log.info("=========进行订单 confirm 操作完成================");
     }
+
     public void cancelOrderStatus() {
-        log.info("=========进行订单cancel操作完成================");
+        log.info("=========进行订单 cancel 操作完成================");
     }
 }
