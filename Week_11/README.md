@@ -6,6 +6,9 @@
 
 1.（选做）命令行下练习操作 Redis 的各种基本数据结构和命令。
 
+- 参考链接：[Redis 命令参考](http://redisdoc.com/index.html)
+- 参考书籍：[redis命令参考手册.pdf](https://github.com/ithup/Redis/blob/master/redis%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C.pdf)
+
 2.（选做）分别基于 jedis，RedisTemplate，Lettuce，Redission 实现 redis 基本操作的 demo，可以使用 spring-boot 集成上述工具。
 
 3.（选做）spring 集成练习:
@@ -16,10 +19,22 @@
 
 4.（必做）基于 Redis 封装分布式数据操作：
 
-- 在 Java 中实现一个简单的分布式锁；
-- 在 Java 中实现一个分布式计数器，模拟减库存。
+- [x] 在 Java 中实现一个简单的分布式锁；
+- [x] 在 Java 中实现一个分布式计数器，模拟减库存。
+
+具体实现，请看 [redis-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/redis-homework)
+
+- JedisController: 使用 Jedis 操作 Redis Demo
+- RedisTemplateController: 使用 RedisTemplate 操作 Redis Demo
+- DistributedLockController: 使用 Lua 脚本实现 Redis 分布式锁
+- DeductionController: 使用 Redis 分布式锁实现库存扣减
 
 5.（必做）基于 Redis 的 PubSub 实现订单异步处理
+
+具体实现，请看 [redis-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/redis-homework)
+
+- PubSubController.jedisDemo: 使用 Jedis 实现 PubSub 异步处理；
+- PubSubController.redisTemplateDemo: 使用 RedisTemplate 实现 PubSub 异步处理；
 
 1.（挑战☆）基于其他各类场景，设计并在示例代码中实现简单 demo：
 
