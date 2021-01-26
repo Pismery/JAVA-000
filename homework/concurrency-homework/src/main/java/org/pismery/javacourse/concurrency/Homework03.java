@@ -1,4 +1,4 @@
-package org.pismery.javacourse.thread;
+package org.pismery.javacourse.concurrency;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
