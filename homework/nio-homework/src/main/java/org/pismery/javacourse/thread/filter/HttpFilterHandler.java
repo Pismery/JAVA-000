@@ -1,4 +1,4 @@
-package org.pismery.gateway.filter;
+package org.pismery.javacourse.thread.filter;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

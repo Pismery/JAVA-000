@@ -1,4 +1,4 @@
-package org.pismery.gateway.outbound.httlclient;
+package org.pismery.javacourse.thread.outbound.httlclient;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;

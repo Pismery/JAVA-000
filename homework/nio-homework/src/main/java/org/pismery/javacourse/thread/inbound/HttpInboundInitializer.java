@@ -1,14 +1,11 @@
-package org.pismery.gateway.inbound;
+package org.pismery.javacourse.thread.inbound;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
-import io.netty.handler.logging.LogLevel;
-import io.netty.handler.logging.LoggingHandler;
-import org.pismery.gateway.filter.HttpFilterHandler;
-import org.pismery.gateway.filter.HttpRequestHeaderFilter;
+import org.pismery.javacourse.thread.filter.HttpFilterHandler;
 
 public class HttpInboundInitializer extends ChannelInitializer<SocketChannel> {
 	

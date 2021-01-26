@@ -1,4 +1,4 @@
-package org.pismery.gateway.inbound;
+package org.pismery.javacourse.thread.inbound;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;

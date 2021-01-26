@@ -1,4 +1,4 @@
-package org.pismery.gateway.router;
+package org.pismery.javacourse.thread.router;
 
 import java.util.List;
 

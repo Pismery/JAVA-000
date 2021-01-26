@@ -1,7 +1,7 @@
-package org.pismery.gateway;
+package org.pismery.javacourse.thread;
 
 
-import org.pismery.gateway.inbound.HttpInboundServer;
+import org.pismery.javacourse.thread.inbound.HttpInboundServer;
 
 public class NettyServerApplication {
     
