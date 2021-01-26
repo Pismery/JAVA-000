@@ -11,6 +11,11 @@
 
 2.（选做）分别基于 jedis，RedisTemplate，Lettuce，Redission 实现 redis 基本操作的 demo，可以使用 spring-boot 集成上述工具。
 
+具体实现，请看 [redis-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/redis-homework)
+
+- JedisController: 使用 Jedis 操作 Redis Demo
+- RedisTemplateController: 使用 RedisTemplate 操作 Redis Demo
+
 3.（选做）spring 集成练习:
 
 - 实现 update 方法，配合 @CachePut
@@ -24,8 +29,6 @@
 
 具体实现，请看 [redis-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/redis-homework)
 
-- JedisController: 使用 Jedis 操作 Redis Demo
-- RedisTemplateController: 使用 RedisTemplate 操作 Redis Demo
 - DistributedLockController: 使用 Lua 脚本实现 Redis 分布式锁
 - DeductionController: 使用 Redis 分布式锁实现库存扣减
 
