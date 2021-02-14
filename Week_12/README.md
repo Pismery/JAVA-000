@@ -59,7 +59,7 @@ sentinel down-after-milliseconds mymaster 5000
 
 #如果在该时间（ms）内未能完成failover操作，则认为该failover失败
 sentinel config-epoch mymaster 15
-```   
+```
 
 2. 启动 sentinel
 
