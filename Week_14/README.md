@@ -8,7 +8,7 @@
 
 ## 动手写MQ
 
-**工程地址：**
+**工程地址：[mq-homework](https://github.com/Pismery/JAVA-000/tree/main/homework/mq-homework)**
 
 ### 第一个版本：内存 Queue
 - [x] 1、基于内存Queue实现生产和消费API
